@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+body{
+    background-color: rgba(211, 211, 211, 0.37);
+}
+
+.right{
+    padding-top: 70px;
+    
+}
+.right .content h1 {
+    color: #3ab19b;
+}
+.right .content .icon{
+    padding: 5px;
+}
+.right .social-log{
+    margin: auto;
+}
+.right .form {
+    padding: 15px 0;
+    margin: auto;
+    
+}
+
+.right .form form input{
+    padding: 10px;
+    padding-left: 40px;
+}
+.right .form form button {
+    padding: 10px 40px;
+    background-color: #3ab19b;
+    margin: auto;
+   
+}
+
+.left{
+    background-color: #3ab19b;
+}
+
+.left h1,p{
+    font-family: sans-serif;
+}
+.left p{
+    padding: 20px;
+    letter-spacing: 2px;
+}
+.left .login {
+    border: 2px solid white;
+    text-align: center;
+    align-self: center;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 60px;
+}

@@ -2,6 +2,8 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+//Signup Authentication
+
 exports.signup = async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -24,6 +26,8 @@ exports.signup = async (req, res) => {
     res.status(500).json({ msg: "Signup failed", error: err.message });
   }
 };
+
+//Login Authencation 
 
 exports.login = async (req, res) => {
   try {
