@@ -12,14 +12,14 @@ function Header (){
     navigate("/login");
   };
     return(
- <header className="w-screen bg-white/80 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="container mx-auto px-4 py-4">
+ <header className="w-screen bg-white/80 backdrop-blur-sm py-4 items-center border-1 border-gray-200 shadow-sm">
+        <div className="container items-center mx-auto ">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <Target className="h-8 w-8 text-primary" />
-              <h1 className="text-2xl font-bold text-foreground">FocusFlow</h1>
+            <div className="flex items-center space-x-3 ">
+              <Target className="h-8 w-8 logo text-primary" />
+              <h1 className="text-2xl font-bold text-foreground logo  ">FocusFlow</h1>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex gap-10">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Calendar className="h-4 w-4" />
                 <span>{new Date().toLocaleDateString('en-US', { 
@@ -29,14 +29,18 @@ function Header (){
                   day: 'numeric' 
                 })}</span>
               </div>
-              <button 
+              <div className='flex gap-1 items-center'> <User className="h-4 w-4 mr-2" />
+               <button 
                 variant="ghost" 
                 size="sm"
+                className='cursor-pointer logout rounded-xl text-white'
                 onClick={handleLogout}
               >
-                <User className="h-4 w-4 mr-2" />
+               
                 Logout
               </button>
+              </div>
+             
             </div>
           </div>
         </div>

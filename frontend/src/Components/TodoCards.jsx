@@ -1,4 +1,5 @@
 import axios from "axios";
+import { X } from 'lucide-react';
 
 function TodoCard({ todo, fetchTodos }) {
   const token = localStorage.getItem("token");
@@ -20,23 +21,14 @@ function TodoCard({ todo, fetchTodos }) {
   };
 
   return (
-    <div className="border p-3 flex justify-between items-center rounded shadow">
-      <div>
-        <h3 className="font-semibold">{todo.title}</h3>
-        <p className="text-sm">{todo.description}</p>
-        <p className="text-xs text-gray-500">
-          Status: {todo.completed ? "✅ Done" : "❌ Pending"}
-        </p>
-      </div>
-      <div className="space-x-2">
-        <button onClick={handleToggle} className="text-sm bg-yellow-400 p-1 px-2 rounded">
-          Mark as a completed
-        </button>
-        <button onClick={handleDelete} className="text-sm bg-red-500 text-white p-1 px-2 rounded">
-          Delete
-        </button>
-      </div>
+   <div className="main w-100">
+    <div className="list-container flex flex-col relative shadow border-1 border-gray-200 pb-10 py-2 px-8 w-150 rounded">
+     <X className="absolute right-4 top-4 cursor-pointer" onClick={handleDelete} />
+      <input onClick={handleToggle} type="checkbox" name="completed" id="complted" className="absolute left-2 top-6 overline-none" />
+      <h1 className="text-xl my-2">{todo.title}</h1>
+      <h6 className="text-sm text-gray-400">{todo.description}</h6>
     </div>
+   </div>
   );
 }
 

@@ -33,6 +33,9 @@ body{
     margin: auto;
    
 }
+.logo{
+    color: #3ab19b;
+}
 
 .left{
     background-color: #3ab19b;
@@ -52,4 +55,9 @@ body{
     font-size: 15px;
     color: #fff;
     padding: 10px 60px;
+}
+
+.logout{
+background-color: #3ab19b;
+padding: 8px 15px;
 }
