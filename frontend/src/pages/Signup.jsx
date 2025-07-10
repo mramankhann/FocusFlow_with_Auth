@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { User,Mail,Lock,Facebook,Linkedin } from 'lucide-react';
+import { User,Mail,Lock,Facebook,Linkedin,Instagram } from 'lucide-react';
 
 function Signup() {
   const [form, setForm] = useState({ username: "", email: "", password: "" });
@@ -17,19 +17,19 @@ function Signup() {
 
   return (
    <div className="sign-main w-screen h-screen flex p-0 overflow-auto">
-    <div className="left w-142 h-screen flex flex-col justify-center text-center">
+    <div className="left w-142 h-full flex flex-col justify-center text-center">
       <h1 className="text-5xl text-white font-bold">Welcome back</h1>
       <p className="text-white ">To keep connect with us please <br /> login with your personal info</p>
       <Link to="/login" className="login text-center rounded-4xl">SIGN IN</Link>
     </div>
-    <div className="right bg-white w-200 flex flex-col justify-center text-center">
+    <div className="right bg-white h-full w-200 flex flex-col justify-center text-center">
       <div className="content flex flex-col gap-7">
         <h1 className="text-5xl font-bold ">Create Account</h1>
         <div className="social-log flex gap-15 ">
          <Facebook className=" icon border rounded-2xl w-10 h-10 "/>
          
          <Linkedin className=" icon border rounded-2xl w-10 h-10"/>
-         <Linkedin className=" icon border rounded-2xl w-10 h-10"/>
+         <Instagram className=" icon border rounded-2xl w-10 h-10"/>
         
          
         </div>

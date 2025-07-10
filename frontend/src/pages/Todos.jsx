@@ -55,7 +55,7 @@ function Todos() {
       <Header />
       
       {/* Task Stats Cards */}
-     <div className="flex justify-center items.center mt-8 gap-10">
+     <div className="flex justify-center max-md:gap-2 items.center mt-8 gap-10">
        <Total total={stats.total}/>
       <Completed completed = {stats.completed}/>
       <Remaining remaining = {stats.remaining}/>
@@ -63,8 +63,8 @@ function Todos() {
       
 
       {/* Todo Task UI */}
-      <div className="container gap-5 flex m-auto mt-10 h-screen tasks-container shadow">
-        <div className="task-left shadow rounded border-1 border-gray-200 bg-white p-8 w-200">
+      <div className="container gap-5 flex max-md:flex-wrap m-auto mt-10 h-full mb-3 tasks-container shadow">
+        <div className="task-left shadow rounded border-1 m-2 border-gray-200 bg-white p-8 w-full">
           <h1 className="text-xl font-bold">Today's Tasks</h1>
           <h6 className="text-sm text-gray-400">
             Manage your daily routine and stay focused
@@ -76,7 +76,7 @@ function Todos() {
           </div>
         </div>
 
-        <div className="task-right bg-white flex text-start p-10 flex-col rounded border-1 border-gray-200 shadow w-120">
+        <div className="task-right bg-white flex max-md: text-start p-10 m-2 flex-col rounded border-1 border-gray-200 shadow w-full">
           <h1 className="text-xl font-bold">Add New Task</h1>
           <h6 className="text-sm text-gray-400">
             Create a new task for daily routine
