@@ -9,7 +9,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/api/auth/signup", form);
+    const res = await axios.post("https://focusflow-udpp.onrender.com/api/auth/signup", form);
     localStorage.setItem("token", res.data.token);
     alert("signup Successfull")
     navigate("/login");

@@ -5,7 +5,7 @@ function TodoCard({ todo, fetchTodos }) {
   const token = localStorage.getItem("token");
 
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:5000/api/todos/${todo._id}`, {
+    await axios.delete(`https://focusflow-udpp.onrender.com/api/todos/${todo._id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchTodos();
@@ -13,7 +13,7 @@ function TodoCard({ todo, fetchTodos }) {
 
   const handleToggle = async () => {
     await axios.put(
-      `http://localhost:5000/api/todos/${todo._id}`,
+      `https://focusflow-udpp.onrender.com/api/todos/${todo._id}`,
       { completed: !todo.completed },
       { headers: { Authorization: `Bearer ${token}` } }
     );

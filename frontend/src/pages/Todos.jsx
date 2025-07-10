@@ -17,7 +17,7 @@ function Todos() {
 
   const fetchTodos = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("http://localhost:5000/api/todos", {
+    const res = await axios.get("https://focusflow-udpp.onrender.com/api/todos", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setTodos(res.data);
@@ -25,7 +25,7 @@ function Todos() {
 
   const fetchStats = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("http://localhost:5000/api/todos/stats", {
+    const res = await axios.get("https://focusflow-udpp.onrender.com/api/todos/stats", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setStats(res.data);
@@ -34,7 +34,7 @@ function Todos() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
-    await axios.post("http://localhost:5000/api/todos", form, {
+    await axios.post("https://focusflow-udpp.onrender.com/api/todos", form, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setForm({ title: "", description: "" });
@@ -81,7 +81,7 @@ function Todos() {
           <h6 className="text-sm text-gray-400">
             Create a new task for daily routine
           </h6>
-            
+
           <div className="task-form mt-6">
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
               <div className="title flex flex-col gap-1">
