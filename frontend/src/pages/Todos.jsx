@@ -17,7 +17,7 @@ function Todos() {
 
   const fetchTodos = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("https://focusflow-udpp.onrender.com/api/todos", {
+    const res = await axios.get("https://focusflow-suyy.onrender.com/api/todos", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setTodos(res.data);
@@ -25,7 +25,7 @@ function Todos() {
 
   const fetchStats = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("https://focusflow-udpp.onrender.com/api/todos/stats", {
+    const res = await axios.get("https://focusflow-suyy.onrender.com/api/todos/stats", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setStats(res.data);
@@ -34,7 +34,7 @@ function Todos() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
-    await axios.post("https://focusflow-udpp.onrender.com/api/todos", form, {
+    await axios.post("https://focusflow-suyy.onrender.com/api/todos", form, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setForm({ title: "", description: "" });

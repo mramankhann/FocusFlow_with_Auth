@@ -8,8 +8,8 @@ function Signup() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const res = await axios.post("https://focusflow-udpp.onrender.com/api/auth/signup", form);
+    e.preventDefault();           
+    const res = await axios.post("https://focusflow-suyy.onrender.com/api/auth/signup", form);
     localStorage.setItem("token", res.data.token);
     alert("signup Successfull")
     navigate("/login");
@@ -54,7 +54,7 @@ function Signup() {
           <div className="email relative">
             <label htmlFor="email"  className="absolute top-2 left-7"> <Mail/></label>
             <input 
-            type="text" 
+            type="email" 
             name="email" 
             id="email"
             placeholder="Email"
@@ -67,7 +67,7 @@ function Signup() {
           <div className="password relative">
             <label htmlFor="password"  className="absolute top-2 left-7"> <Lock/></label>
             <input 
-            type="text" 
+            type="password" 
             name="password" 
             id="password"
             placeholder="Password"

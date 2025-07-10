@@ -12,7 +12,7 @@ function login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.post("https://focusflow-udpp.onrender.com/api/auth/login", form)
+        const res = await axios.post("https://focusflow-suyy.onrender.com/api/auth/login", form)
         localStorage.setItem('token', res.data.token)
         alert("Login Successfull")
         navigate("/")
@@ -54,7 +54,7 @@ function login() {
           <div className="password relative">
             <label htmlFor="password"  className="absolute top-2 left-7"> <Lock/></label>
             <input 
-            type="text" 
+            type="password" 
             name="password" 
             id="password"
             placeholder="Password"
