@@ -21,7 +21,7 @@ function login() {
 
     return (
         <>
-            <div className="main w-screen h-screen flex p-0 overflow-hidden">
+            <div className="log-main w-screen h-screen flex p-0 overflow-auto">
    
     <div className="right bg-white w-200 flex flex-col justify-center text-center">
       <div className="content flex flex-col gap-7">

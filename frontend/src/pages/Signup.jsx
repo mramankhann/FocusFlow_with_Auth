@@ -16,7 +16,7 @@ function Signup() {
   };
 
   return (
-   <div className="main w-screen h-screen flex p-0 overflow-hidden">
+   <div className="sign-main w-screen h-screen flex p-0 overflow-auto">
     <div className="left w-142 h-screen flex flex-col justify-center text-center">
       <h1 className="text-5xl text-white font-bold">Welcome back</h1>
       <p className="text-white ">To keep connect with us please <br /> login with your personal info</p>

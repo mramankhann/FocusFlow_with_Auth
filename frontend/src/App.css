@@ -61,3 +61,12 @@ body{
 background-color: #3ab19b;
 padding: 8px 15px;
 }
+
+@media (max-width:430px) {
+    .log-main{
+        flex-wrap: wrap-reverse;
+    }
+    .sign-main{
+        flex-wrap: wrap;
+    }
+}
