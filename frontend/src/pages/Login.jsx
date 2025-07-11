@@ -48,7 +48,7 @@ function Login() {
               <div className="email relative">
                 <label htmlFor="email" className="absolute top-2 left-7"><Mail /></label>
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   id="email"
                   placeholder="Email"
